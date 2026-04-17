@@ -15,6 +15,7 @@ fi
 echo >> $DB_CONF_ROUTE
 echo "[mysqld]" >> $DB_CONF_ROUTE
 echo "bind-address=0.0.0.0" >> $DB_CONF_ROUTE
+echo "port=$DB_PORT" >> $DB_CONF_ROUTE
 
 # Start MariaDB
 mysqld_safe &

@@ -23,4 +23,10 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all inception down up clean fclean re
+update:
+	docker-compose -f ./srcs/docker-compose.yml kill -v || true
+	sudo rm -rf ${DIR}/data/*
+	make all
+
+
+.PHONY: all inception down up clean fclean re update

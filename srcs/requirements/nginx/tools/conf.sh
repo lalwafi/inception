@@ -12,7 +12,7 @@ openssl req -x509 -newkey rsa:2048 -days 365 -nodes -keyout $CERT_KEY -out $CERT
 # Create nginx configuration with properly expanded variables
 cat > $NGINX_CONF << EOF
 server {
-    listen 443 ssl http2;
+    listen $NGINX_PORT ssl http2;
     server_name $HOST_LOGIN;
 
     root $WP_ROUTE;
@@ -28,7 +28,7 @@ server {
 
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass wordpress:9000;
+        fastcgi_pass wordpress:$WP_PORT;
     }
 }
 EOF

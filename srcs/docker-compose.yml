@@ -8,7 +8,7 @@ services:
     volumes:
       - wordpress:/var/www/html/wordpress
     ports:
-      - "443:443"
+      - "${NGINX_PORT}:${NGINX_PORT}"
     networks:
       - web
     depends_on:
@@ -25,7 +25,7 @@ services:
     networks:
       - web
     expose:
-      - "9000"
+      - "${WP_PORT}"
     depends_on:
       - mariadb
     restart: always
@@ -40,7 +40,7 @@ services:
     env_file:
       - ./.env
     expose:
-      - "3306"
+      - "${DB_PORT}"
     restart: always
 networks:
   web:
