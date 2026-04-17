@@ -25,13 +25,15 @@ until mysqladmin ping >/dev/null 2>&1; do
   echo -n "."; sleep 0.2
 done
 
-# Create database and users
-mysql -u root << SQL
+# Create database and users (only on first initialization)
+if [ ! -d "$DB_INSTALL/$DB_NAME" ]; then
+    mysql -u root << SQL
 CREATE DATABASE IF NOT EXISTS $DB_NAME;
 ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS';
 GRANT ALL ON $DB_NAME.* TO '$DB_USER'@'%' IDENTIFIED BY '$DB_PASS';
 FLUSH PRIVILEGES;
 SQL
+fi
 
 # Keep container running
 wait $mysql_pid
