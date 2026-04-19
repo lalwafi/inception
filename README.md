@@ -91,30 +91,16 @@ make re
 
 ## Resources
 
-### Documentation
-- Docker official docs: https://docs.docker.com
-- Docker Compose reference: https://docs.docker.com/compose/compose-file/
-- NGINX documentation: https://nginx.org/en/docs/
-- WP-CLI documentation: https://wp-cli.org
-- MariaDB documentation: https://mariadb.com/kb/en/
-- PHP-FPM documentation: https://www.php.net/manual/en/install.fpm.php
+* [Docker official documentation](https://docs.docker.com/)
+* [Docker Compose reference](https://docs.docker.com/compose/compose-file/)
+* [NGINX documentation](https://nginx.org/en/docs/)
+* [WordPress WP-CLI documentation](https://wp-cli.org/)
+* [MariaDB documentation](https://mariadb.com/kb/en/documentation/)
+* [PHP-FPM configuration](https://www.php.net/manual/en/install.fpm.configuration.php)
+* [OpenSSL self-signed certificates](https://www.openssl.org/docs/)
+* [Understanding Docker volumes](https://docs.docker.com/storage/volumes/)
+* [TLS/SSL overview](https://www.cloudflare.com/learning/ssl/what-is-ssl/)
+* [PID 1 in Docker containers](https://medium.com/@boutnaru/the-linux-process-journey-pid-1-init-60765a069f17)
 
-### Concepts
-- PID 1 in containers: https://medium.com/@boutnaru/the-linux-process-journey-pid-1-init-60765a069f17
-- TLS basics: https://www.internetsociety.org/deploy360/tls/basics/
-- Docker Volumes: https://docs.docker.com/engine/storage/volumes/
-- Containerization vs Virtualization: https://www.geeksforgeeks.org/system-design/virtualization-vs-containerization/
-
-### Courses & Guides
-- KodeKloud Docker for beginners: https://kodekloud.com/courses/docker-for-the-absolute-beginner
-- 42 student guide 1: https://github.com/ChineduGboof/Inception
-- 42 student guide 2: https://www.notion.so/Inception-1444c902209b801981a0cf75149fa944
-
-### AI Usage
-AI was used to understand concepts such as PHP-FPM configuration,
-TLS certificate generation with OpenSSL, Docker networking, and
-writing entrypoint scripts correctly.
-AI was also used to help structure documentation and understand
-the difference between Docker volumes, bind mounts, secrets,
-and environment variables.
-All generated content was reviewed, tested, and understood before use.
+AI tools were used to assist with structure validation, debugging, and compliance verification.
+All AI-generated suggestions were reviewed, tested, and validated before being included in the project. The code was understood and verified line by line before submission.

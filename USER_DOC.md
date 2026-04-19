@@ -27,8 +27,6 @@ Accept the security warning — this is normal for a self-signed certificate.
 ```
 https://lalwafi.42.fr/wp-admin
 ```
-- Username: lalwafi_admin
-- Password: admin123
 
 ## Where are the credentials?
 All credentials are stored in:
